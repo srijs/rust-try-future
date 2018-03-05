@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/srijs/rust-try-future.svg?branch=master)](https://travis-ci.org/srijs/rust-try-future)
 [![Dependency Status](https://deps.rs/repo/github/srijs/rust-try-future/status.svg)](https://deps.rs/repo/github/srijs/rust-try-future)
+[![crates.io](https://img.shields.io/crates/v/try_future.svg)](https://crates.io/crates/try_future)
 
 This crate aims to provide a convenient short-hand for returning early
 from `futures`-based functions.
