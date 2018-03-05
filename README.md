@@ -1,5 +1,8 @@
 # `try_future`
 
+[![Build Status](https://travis-ci.org/srijs/rust-try-future.svg?branch=master)](https://travis-ci.org/srijs/rust-try-future)
+[![Dependency Status](https://deps.rs/repo/github/srijs/rust-try-future/status.svg)](https://deps.rs/repo/github/srijs/rust-try-future)
+
 This crate aims to provide a convenient short-hand for returning early
 from `futures`-based functions.
 
