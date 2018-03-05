@@ -2,7 +2,7 @@
 name = "try_future"
 version = "0.1.0"
 authors = ["Sam Rijs <srijs@airpost.net>"]
-description = "Convenient short-hand for returning early from `futures`-based function"
+description = "Convenient short-hand for returning early from `futures`-based functions"
 repository = "https://github.com/srijs/rust-try-future"
 license = "MIT"
 readme = "README.md"
