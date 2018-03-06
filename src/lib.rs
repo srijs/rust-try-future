@@ -5,11 +5,11 @@
 //! an asynchonous task, it does some work that might result in an early
 //! termination, for example:
 //!
-//! - certain parsing or validation logic might fail, upon which the function
-//!   should return immediately with an error
+//! - certain parsing or validation logic that might fail, and upon which
+//!   the function should return immediately with an error
 //! - some local cache lookup or other optimisation that might render the
-//!   asynchronous task unnecessary, and where the function would want immediately
-//!   return a value instead
+//!   asynchronous task unnecessary, and where the function should instead
+//!   return immediately with a value
 //!
 //! To that end, the [`TryFuture`](TryFuture) struct implements a future which can
 //! either resolve immediately with a value or an error, or alternatively wrap another
@@ -102,7 +102,7 @@ impl<F: Future> TryFuture<F> {
         TryFuture::from_result(Ok(item))
     }
 
-    /// Create a `TryFrom` future that immediately rejects
+    /// Create a `TryFuture` future that immediately rejects
     /// with the specified error.
     pub fn from_error(err: F::Error) -> TryFuture<F> {
         TryFuture::from_result(Err(err))
