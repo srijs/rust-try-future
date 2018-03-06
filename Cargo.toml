@@ -1,6 +1,6 @@
 [package]
 name = "try_future"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Sam Rijs <srijs@airpost.net>"]
 description = "Convenient short-hand for returning early from `futures`-based functions"
 repository = "https://github.com/srijs/rust-try-future"
