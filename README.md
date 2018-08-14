@@ -19,7 +19,7 @@ termination, for example:
 
 # Examples
 
-## Using `impl Future<_>` (nightly)
+## Using `impl Future<_>`
 
 ```rust
 #[macro_use] extern crate try_future;
