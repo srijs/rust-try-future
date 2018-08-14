@@ -28,13 +28,13 @@
 //! > **Please note**: The `try_future!` and `try_future_box!` macros only accept inputs
 //! > of type `Result`. Alas, the equivalent of `async`/`await` is not yet possible in
 //! > stable rust (however if you don't shy away from using nightly, you could take a look
-//! > at the [`futures-await`](https://github.com/alexcrichton/futures-await) project). 
+//! > at the [`futures-await`](https://github.com/alexcrichton/futures-await) project).
 //!
 //! # Examples
 //!
-//! ## Using `impl Future<_>` (nightly)
+//! ## Using `impl Future<_>`
 //!
-//! ```rust,ignore;
+//! ```rust,ignore
 //! #[macro_use] extern crate try_future;
 //!
 //! fn make_request<C: Connect>(target: &str, client: &Client<C>) ->
@@ -81,12 +81,12 @@ impl<F: Future + Debug> Debug for TryFuture<F> {
     fn fmt(&self, fmt: &mut Formatter) -> FmtResult {
         fmt.debug_struct("TryFuture").finish()
     }
-} 
+}
 
 #[derive(Debug)]
 enum TryFutureInner<F: Future> {
    Result(::futures::future::FutureResult<F::Item, F::Error>),
-   Future(F) 
+   Future(F)
 }
 
 impl<F: Future> TryFuture<F> {
