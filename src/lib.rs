@@ -2,12 +2,12 @@
 //! from `futures`-based functions.
 //!
 //! The general pattern it supports is where before a function performs
-//! an asynchonous task, it does some work that might result in an early
+//! an asynchronous task, it does some work that might result in an early
 //! termination, for example:
 //!
 //! - certain parsing or validation logic that might fail, and upon which
 //!   the function should return immediately with an error
-//! - some local cache lookup or other optimisation that might render the
+//! - some local cache lookup or other optimization that might render the
 //!   asynchronous task unnecessary, and where the function should instead
 //!   return immediately with a value
 //!

@@ -8,12 +8,12 @@ This crate aims to provide a convenient short-hand for returning early
 from `futures`-based functions.
 
 The general pattern it supports is where before a function performs
-an asynchonous task, it does some work that might result in an early
+an asynchronous task, it does some work that might result in an early
 termination, for example:
 
 - certain parsing or validation logic might fail, upon which the function
   should return immediately with an error
-- some local cache lookup or other optimisation that might render the
+- some local cache lookup or other optimization that might render the
   asynchronous task unnecessary, and where the function would want immediately
   return a value instead
 
